@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --primary-color:#001529
+}
+
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.pulse .pulse-ring {
+  border-color: var(--primary-color);
+  display: block;
+  position: absolute;
+  -webkit-animation: animation-pulse 3.5s ease-out;
+  animation: animation-pulse 3.5s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  border-style: solid;
+  top: -14px;
+  border-radius: 45px;
+  height: 45px;
+  width: 45px;
+  opacity: 0;
+  border-width: 5px;
+}
+
+
+@keyframes animation-pulse {
+  0% {
+      -webkit-transform: scale(0.1, 0.1);
+      opacity: 0.0
+  }
+
+  60% {
+      -webkit-transform: scale(0.1, 0.1);
+      opacity: 0.0
+  }
+
+  65% {
+      opacity: 1
+  }
+
+  100% {
+      -webkit-transform: scale(1.2, 1.2);
+      opacity: 0.0
+  }
+}

@@ -15,7 +15,6 @@ export default function TaskForm({setOpen}) {
 
   const onFinish = async (values) => {
     const result = await taskAdd(values)
-    console.log(result)
     if(result.status ==='success'){
       success()
       setOpen(false)
